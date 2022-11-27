@@ -1,31 +1,8 @@
 # StormPay
 
-A new Flutter project.
+En este documento se describe el diseño e implementación de una aplicación móvil de cartera digital para Android e IOS. La aplicación será capaz de transferir vía NFC dinero a la cartera del usuario, de tal manera que pueda usar el dinero que le han compartido para efectuar pagos. La voluntad principal de la aplicación es la de que un usuario pueda pedir dinero a otras personas de forma rápida y sencilla para poder gastarlo también haciendo uso del NFC en, por ejemplo, un datáfono. Se espera que esta aplicación tenga una variedad de usos, tales como repartir dinero con tus amigos en un establecimiento donde se divide la cuenta, pedir dinero prestado de forma rápida o tener una cartera digital a mano para .
 
-## Getting Started
+El desarrollo de esta aplicación se llevó a cabo utilizando Flutter y Android Studio, principalmente  ya que Flutter es un framework multi-plataforma, se puede desarrollar tanto para Android como para IOS. Por lo tanto, se podría desarrollar el mismo proyecto para ambos sistemas operativos.
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+El proceso de desarrollo se dividió en cuatro fases principales de la metodología Scrum: la configuración del entorno de desarrollo, el diseño de la interfaz de usuario, la implementación de la lógica de la aplicación y la prueba y depuración. En cada una de estas fases, se utilizaron diferentes herramientas y técnicas. La configuración del entorno de desarrollo implicó la instalación de todos los componentes necesarios, como el SDK de Android. El diseño de la interfaz de usuario se realizó empleando el índice de widgets de Flutter. La implementación de la lógica de la aplicación se realizó en Dart, un lenguaje de Google basado en Javascript. Teniendo en cuenta que la aplicación será una aplicación móvil que usa NFC, se espera que el usuario final tenga acceso a esta tecnología en su dispositivo.
 
-### IMPORTANT:
-
-For projects with Firestore integration, you must first run the following commands to ensure the project compiles:
-
-```
-flutter pub get
-flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-
-This command creates the generated files that parse each Record from Firestore into a schema object.
-
-### Getting started continued:
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
