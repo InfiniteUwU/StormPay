@@ -82,7 +82,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Login to access your account below.',
       'ar': 'قم بإنشاء حسابك أدناه.',
       'de': 'Erstellen Sie unten Ihr Konto.',
-      'es': 'Crea tu cuenta a continuación.',
+      'es': 'Inicia Sesión',
     },
     'a9j78va9': {
       'en': 'Email Address',
@@ -332,84 +332,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Casa',
     },
   },
-  // MY_Card
-  {
-    'xn2so8km': {
-      'en': 'My Card',
-      'ar': 'بطاقتي',
-      'de': 'Meine Karte',
-      'es': 'Mi tarjeta',
-    },
-    '6t7n9ugd': {
-      'en': 'Your Money',
-      'ar': 'الرصيد',
-      'de': 'Gleichgewicht',
-      'es': 'Tu Dinero',
-    },
-    '8bnd6lco': {
-      'en': 'Transfer',
-      'ar': 'تحويل',
-      'de': 'Transfer',
-      'es': 'Transferir',
-    },
-    'cbns1vnt': {
-      'en': 'Receive',
-      'ar': 'تحويل',
-      'de': 'Receive',
-      'es': 'Recibir',
-    },
-    'm8rhanhc': {
-      'en': '•',
-      'ar': '•',
-      'de': '•',
-      'es': '•',
-    },
-  },
-  // paymentDetails
-  {
-    'j0yzgf4n': {
-      'en': 'Details',
-      'ar': 'تفاصيل',
-      'de': 'Einzelheiten',
-      'es': 'Detalles',
-    },
-    'zv72ekdw': {
-      'en': 'Amount',
-      'ar': 'مقدار',
-      'de': 'Höhe',
-      'es': 'Monto',
-    },
-    '0rjyjwed': {
-      'en': 'Vendor',
-      'ar': 'بائع',
-      'de': 'Verkäufer',
-      'es': 'Vendedor',
-    },
-    'eeyn6dk2': {
-      'en': 'When',
-      'ar': 'متى',
-      'de': 'Wann',
-      'es': 'Cuándo',
-    },
-    'lccxx6eu': {
-      'en': 'Reason',
-      'ar': 'سبب',
-      'de': 'Grund',
-      'es': 'Razón',
-    },
-    'jzyax4hn': {
-      'en': 'Spent by',
-      'ar': 'أنفقه',
-      'de': 'Verbracht von',
-      'es': 'gastado por',
-    },
-    'i4r9jqwn': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-    },
-  },
   // MY_profilePage
   {
     'f1bvbey3': {
@@ -455,6 +377,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '•',
     },
   },
+  // MY_Card
+  {
+    'xn2so8km': {
+      'en': 'My Card',
+      'ar': 'بطاقتي',
+      'de': 'Meine Karte',
+      'es': 'Mi tarjeta',
+    },
+    '6t7n9ugd': {
+      'en': 'Your Money',
+      'ar': 'الرصيد',
+      'de': 'Gleichgewicht',
+      'es': 'Tu Dinero',
+    },
+    '8bnd6lco': {
+      'en': 'Transfer',
+      'ar': 'تحويل',
+      'de': 'Transfer',
+      'es': 'Transferir',
+    },
+    'cbns1vnt': {
+      'en': 'Receive',
+      'ar': 'تحويل',
+      'de': 'Receive',
+      'es': 'Recibir',
+    },
+    'm8rhanhc': {
+      'en': '•',
+      'ar': '•',
+      'de': '•',
+      'es': '•',
+    },
+  },
   // transferComplete
   {
     'xf8d4sm8': {
@@ -476,6 +431,102 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Casa',
     },
   },
+  // editProfile
+  {
+    '4rzqov3y': {
+      'en': 'Edit Profile',
+      'ar': 'تعديل الملف الشخصي',
+      'de': 'Profil bearbeiten',
+      'es': 'Editar perfil',
+    },
+    'zoxan2gi': {
+      'en': 'Change Photo',
+      'ar': 'غير الصوره',
+      'de': 'Foto ändern',
+      'es': 'Cambiar foto',
+    },
+    '3p9y21e2': {
+      'en': 'Your Name',
+      'ar': 'اسمك',
+      'de': 'Dein Name',
+      'es': 'Tu nombre',
+    },
+    'dw9gmjdc': {
+      'en': 'Please enter a valid number...',
+      'ar': 'من فضلك أدخل رقما صالحا...',
+      'de': 'Bitte geben Sie eine gültige Nummer ein...',
+      'es': 'Por favor ingrese un número valido...',
+    },
+    'z4fstn5l': {
+      'en': 'Email Address',
+      'ar': 'عنوان البريد الالكترونى',
+      'de': 'E-Mail-Addresse',
+      'es': 'Dirección de correo electrónico',
+    },
+    'jozgvwyg': {
+      'en': 'Your email',
+      'ar': 'بريدك الالكتروني',
+      'de': 'Deine E-Mail',
+      'es': 'Tu correo electrónico',
+    },
+    '8h1cjk5a': {
+      'en': 'Your Age',
+      'ar': 'عمرك',
+      'de': 'Ihr Alter',
+      'es': 'Su edad',
+    },
+    '5v21r6gb': {
+      'en': 'i.e. 34',
+      'ar': 'أي 34',
+      'de': 'dh 34',
+      'es': 'es decir, 34',
+    },
+    'zvymbfia': {
+      'en': 'Your Title',
+      'ar': 'لقبك',
+      'de': 'Dein Titel',
+      'es': 'Tu título',
+    },
+    'jxnc7qm5': {
+      'en': 'Your Funds',
+      'ar': 'لقبك',
+      'de': 'Dein Titel',
+      'es': 'Tus fondos',
+    },
+    'i6edcl52': {
+      'en': 'Save Changes',
+      'ar': 'حفظ التغييرات',
+      'de': 'Änderungen speichern',
+      'es': 'Guardar cambios',
+    },
+    '59naq8ur': {
+      'en': 'Home',
+      'ar': 'مسكن',
+      'de': 'Heim',
+      'es': 'Casa',
+    },
+  },
+  // transferError
+  {
+    '9p8emk1e': {
+      'en': 'Transfer Error',
+      'ar': 'نقل كامل',
+      'de': 'Übertragung vollständig',
+      'es': 'Error de Transferencia',
+    },
+    'hksjysa1': {
+      'en': 'Okay',
+      'ar': 'تمام',
+      'de': 'Okay',
+      'es': 'Vale',
+    },
+    '73f2yydk': {
+      'en': 'Home',
+      'ar': 'مسكن',
+      'de': 'Heim',
+      'es': 'Casa',
+    },
+  },
   // transferFunds
   {
     'pe3o18oh': {
@@ -490,17 +541,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Gleichgewicht',
       'es': 'Tu tarjeta',
     },
-    'ynie0pc5': {
-      'en': '€ ',
-      'ar': 'المبلغ بالدولار',
-      'de': '€',
-      'es': '€ ',
+    '2fsvnxxn': {
+      'en': 'Money',
+      'ar': 'لقبك',
+      'de': 'Dein Titel',
+      'es': 'Fondos a Enviar',
     },
-    'xaw2jdst': {
-      'en': 'Send ',
-      'ar': 'أرسل حوالة',
-      'de': ' senden',
-      'es': 'Enviar ',
+    'xdx2sv3h': {
+      'en': '',
+      'ar': '',
+      'de': '',
+      'es': '',
+    },
+    'nb7xajx2': {
+      'en': 'Send',
+      'ar': 'حفظ التغييرات',
+      'de': 'Enviar',
+      'es': 'Enviar',
     },
     'imaejg7x': {
       'en': 'Home',
@@ -566,75 +623,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Toque arriba para completar la solicitud',
     },
     'xk0bwox3': {
-      'en': 'Home',
-      'ar': 'مسكن',
-      'de': 'Heim',
-      'es': 'Casa',
-    },
-  },
-  // editProfile
-  {
-    '4rzqov3y': {
-      'en': 'Edit Profile',
-      'ar': 'تعديل الملف الشخصي',
-      'de': 'Profil bearbeiten',
-      'es': 'Editar perfil',
-    },
-    'zoxan2gi': {
-      'en': 'Change Photo',
-      'ar': 'غير الصوره',
-      'de': 'Foto ändern',
-      'es': 'Cambiar foto',
-    },
-    '3p9y21e2': {
-      'en': 'Your Name',
-      'ar': 'اسمك',
-      'de': 'Dein Name',
-      'es': 'Tu nombre',
-    },
-    'dw9gmjdc': {
-      'en': 'Please enter a valid number...',
-      'ar': 'من فضلك أدخل رقما صالحا...',
-      'de': 'Bitte geben Sie eine gültige Nummer ein...',
-      'es': 'Por favor ingrese un número valido...',
-    },
-    'z4fstn5l': {
-      'en': 'Email Address',
-      'ar': 'عنوان البريد الالكترونى',
-      'de': 'E-Mail-Addresse',
-      'es': 'Dirección de correo electrónico',
-    },
-    'jozgvwyg': {
-      'en': 'Your email',
-      'ar': 'بريدك الالكتروني',
-      'de': 'Deine E-Mail',
-      'es': 'Tu correo electrónico',
-    },
-    '8h1cjk5a': {
-      'en': 'Your Age',
-      'ar': 'عمرك',
-      'de': 'Ihr Alter',
-      'es': 'Su edad',
-    },
-    '5v21r6gb': {
-      'en': 'i.e. 34',
-      'ar': 'أي 34',
-      'de': 'dh 34',
-      'es': 'es decir, 34',
-    },
-    'zvymbfia': {
-      'en': 'Your Title',
-      'ar': 'لقبك',
-      'de': 'Dein Titel',
-      'es': 'Tu título',
-    },
-    'i6edcl52': {
-      'en': 'Save Changes',
-      'ar': 'حفظ التغييرات',
-      'de': 'Änderungen speichern',
-      'es': 'Guardar cambios',
-    },
-    '59naq8ur': {
       'en': 'Home',
       'ar': 'مسكن',
       'de': 'Heim',
@@ -1094,81 +1082,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Reservar ahora',
     },
   },
-  // editBooking
-  {
-    '6j668hma': {
-      'en': 'Edit Appointment',
-      'ar': 'تحرير موعد',
-      'de': 'Termin bearbeiten',
-      'es': 'Editar cita',
-    },
-    'cbp936ta': {
-      'en': 'Edit the fields below in order to change your appointment.',
-      'ar': 'قم بتحرير الحقول أدناه لتغيير موعدك.',
-      'de': 'Bearbeiten Sie die Felder unten, um Ihren Termin zu ändern.',
-      'es': 'Edite los campos a continuación para cambiar su cita.',
-    },
-    '6btfslje': {
-      'en': 'Emails will be sent to:',
-      'ar': 'سيتم إرسال رسائل البريد الإلكتروني إلى:',
-      'de': 'E-Mails werden gesendet an:',
-      'es': 'Los correos electrónicos serán enviados a:',
-    },
-    'mhko6q8p': {
-      'en': 'Booking For',
-      'ar': 'الحجز لـ',
-      'de': 'Buchung für',
-      'es': 'reserva para',
-    },
-    'shqcgjqe': {
-      'en': 'Type of Appointment',
-      'ar': 'نوع التعيين',
-      'de': 'Art der Ernennung',
-      'es': 'Tipo de cita',
-    },
-    '5ixhbnsd': {
-      'en': 'Doctors Visit',
-      'ar': 'زيارة الأطباء',
-      'de': 'Arztbesuch',
-      'es': 'Visita de médicos',
-    },
-    'db46hhfw': {
-      'en': 'Routine Checkup',
-      'ar': 'فحص روتيني حتى',
-      'de': 'Routineuntersuchung',
-      'es': 'Chequeo de rutina',
-    },
-    'e1zm6kzh': {
-      'en': 'Scan/Update',
-      'ar': 'مسح / تحديث',
-      'de': 'Scannen/Aktualisieren',
-      'es': 'Escanear/Actualizar',
-    },
-    'oy6qvd33': {
-      'en': 'What\'s the problem?',
-      'ar': 'ما هي المشكلة؟',
-      'de': 'Was ist das Problem?',
-      'es': '¿Cuál es el problema?',
-    },
-    '9emhgrhs': {
-      'en': 'Choose Date',
-      'ar': 'اختر موعدا',
-      'de': 'Wählen Sie Datum',
-      'es': 'Elija Fecha',
-    },
-    '2bzoinpy': {
-      'en': 'Cancel',
-      'ar': 'يلغي',
-      'de': 'Abbrechen',
-      'es': 'Cancelar',
-    },
-    'gjnq0j86': {
-      'en': 'Save Changes',
-      'ar': 'حفظ التغييرات',
-      'de': 'Änderungen speichern',
-      'es': 'Guardar cambios',
-    },
-  },
   // pauseCard
   {
     'dt7m486y': {
@@ -1216,7 +1129,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': '',
       'es': '',
     },
-    'y0i8c8in': {
+    'xiabohrb': {
       'en': 'NFC',
       'ar': '',
       'de': '',

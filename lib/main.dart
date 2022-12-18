@@ -11,11 +11,13 @@ import 'flutter_flow/internationalization.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'index.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   await FlutterFlowTheme.initialize();
 
   runApp(MyApp());
@@ -130,13 +132,14 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'MY_Card': MYCardWidget(),
       'MY_profilePage': MYProfilePageWidget(),
+      'MY_Card': MYCardWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: BottomNavigationBar(
+      extendBody: true,
+      bottomNavigationBar: FloatingNavbar(
         currentIndex: currentIndex,
         onTap: (i) => setState(() {
           _currentPage = null;
@@ -145,37 +148,69 @@ class _NavBarPageState extends State<NavBarPage> {
         backgroundColor: FlutterFlowTheme.of(context).darkBackground,
         selectedItemColor: FlutterFlowTheme.of(context).primaryColor,
         unselectedItemColor: FlutterFlowTheme.of(context).grayLight,
-        showSelectedLabels: true,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.credit_card,
-              size: 24,
+        selectedBackgroundColor: Color(0x00000000),
+        borderRadius: 8,
+        itemBorderRadius: 8,
+        margin: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+        width: double.infinity,
+        elevation: 0,
+        items: [
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  currentIndex == 0
+                      ? Icons.account_circle_rounded
+                      : Icons.account_circle_outlined,
+                  color: currentIndex == 0
+                      ? FlutterFlowTheme.of(context).primaryColor
+                      : FlutterFlowTheme.of(context).grayLight,
+                  size: 24,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    '8srr2k0j' /* • */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 0
+                        ? FlutterFlowTheme.of(context).primaryColor
+                        : FlutterFlowTheme.of(context).grayLight,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            activeIcon: FaIcon(
-              FontAwesomeIcons.solidCreditCard,
-              size: 20,
-            ),
-            label: FFLocalizations.of(context).getText(
-              'm8rhanhc' /* • */,
-            ),
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle_outlined,
-              size: 24,
+          FloatingNavbarItem(
+            customWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  currentIndex == 1
+                      ? FontAwesomeIcons.solidCreditCard
+                      : Icons.credit_card,
+                  color: currentIndex == 1
+                      ? FlutterFlowTheme.of(context).primaryColor
+                      : FlutterFlowTheme.of(context).grayLight,
+                  size: 20,
+                ),
+                Text(
+                  FFLocalizations.of(context).getText(
+                    'm8rhanhc' /* • */,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: currentIndex == 1
+                        ? FlutterFlowTheme.of(context).primaryColor
+                        : FlutterFlowTheme.of(context).grayLight,
+                    fontSize: 11.0,
+                  ),
+                ),
+              ],
             ),
-            activeIcon: Icon(
-              Icons.account_circle_rounded,
-              size: 24,
-            ),
-            label: FFLocalizations.of(context).getText(
-              '8srr2k0j' /* • */,
-            ),
-            tooltip: '',
           )
         ],
       ),

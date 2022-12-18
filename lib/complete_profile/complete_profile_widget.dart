@@ -489,7 +489,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                         onPressed: () async {
                           final usersUpdateData = createUsersRecordData(
                             displayName: yourNameController!.text,
-                            age: int.parse(yourAgeController!.text),
+                            age: int.tryParse(yourAgeController!.text),
                             userTitle: yourTitleController!.text,
                             photoUrl: '',
                           );

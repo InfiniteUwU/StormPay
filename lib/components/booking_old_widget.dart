@@ -6,8 +6,8 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -309,21 +309,22 @@ class _BookingOldWidgetState extends State<BookingOldWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                     child: InkWell(
                       onTap: () async {
-                        await DatePicker.showDatePicker(
-                          context,
-                          showTitleActions: true,
-                          onConfirm: (date) {
-                            setState(() => datePicked = date);
-                          },
-                          currentTime: getCurrentTimestamp,
-                          minTime: DateTime(0, 0, 0),
-                          locale: LocaleType.values.firstWhere(
-                            (l) =>
-                                l.name ==
-                                FFLocalizations.of(context).languageCode,
-                            orElse: () => LocaleType.en,
-                          ),
+                        final _datePickedDate = await showDatePicker(
+                          context: context,
+                          initialDate: getCurrentTimestamp,
+                          firstDate: DateTime(1900),
+                          lastDate: DateTime(2050),
                         );
+
+                        if (_datePickedDate != null) {
+                          setState(
+                            () => datePicked = DateTime(
+                              _datePickedDate.year,
+                              _datePickedDate.month,
+                              _datePickedDate.day,
+                            ),
+                          );
+                        }
                       },
                       child: Material(
                         color: Colors.transparent,
@@ -453,21 +454,8 @@ class _BookingOldWidgetState extends State<BookingOldWidget> {
                           ),
                         ),
                         FFButtonWidget(
-                          onPressed: () async {
-                            final appointmentsCreateData =
-                                createAppointmentsRecordData(
-                              appointmentType: dropDownValue,
-                              appointmentTime: datePicked,
-                              appointmentName:
-                                  personsNameController?.text ?? '',
-                              appointmentDescription:
-                                  problemDescriptionController!.text,
-                              appointmentEmail: currentUserEmail,
-                            );
-                            await AppointmentsRecord.collection
-                                .doc()
-                                .set(appointmentsCreateData);
-                            Navigator.pop(context);
+                          onPressed: () {
+                            print('Button pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
                             '13j05r8j' /* Book Now */,

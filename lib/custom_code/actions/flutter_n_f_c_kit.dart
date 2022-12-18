@@ -10,13 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_nfc_kit/flutter_nfc_kit.dart';
 import 'package:ndef/ndef.dart' as ndef;
 
-Future<double?> flutterNFCKit() async {
-  var result = '0';
+Future<double> flutterNFCKit() async {
+  var record = "0";
 
   var availability = await FlutterNfcKit.nfcAvailability;
   if (availability != NFCAvailability.available) {
     await FlutterNfcKit.finish();
-    return double.parse(result);
+    return double.parse(record);
   }
 
   var tag = await FlutterNfcKit.poll(timeout: Duration(seconds: 10));
@@ -24,7 +24,7 @@ Future<double?> flutterNFCKit() async {
     // read NDEF records if available
     if (tag.ndefAvailable == true) {
       for (var record in await FlutterNfcKit.readNDEFRecords(cached: false)) {
-        result = record.toString();
+        record = record;
       }
     }
   }
@@ -32,5 +32,5 @@ Future<double?> flutterNFCKit() async {
   // Call finish() only once
   await FlutterNfcKit.finish();
 
-  return double.parse(result);
+  return double.parse(record);
 }

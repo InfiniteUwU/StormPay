@@ -486,10 +486,14 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                       text: FFLocalizations.of(context).getText(
                         '8d386226' /* Light Mode */,
                       ),
+                      icon: Icon(
+                        Icons.wb_sunny_outlined,
+                        size: 15,
+                      ),
                       options: FFButtonOptions(
                         width: 130,
                         height: 40,
-                        color: FlutterFlowTheme.of(context).secondaryColor,
+                        color: FlutterFlowTheme.of(context).customColor1,
                         textStyle:
                             FlutterFlowTheme.of(context).subtitle2.override(
                                   fontFamily: 'Lexend',

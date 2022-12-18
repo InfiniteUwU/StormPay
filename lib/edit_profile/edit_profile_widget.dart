@@ -30,10 +30,22 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
   TextEditingController? yourEmailController;
   TextEditingController? yourAgeController;
   TextEditingController? yourTitleController;
+  TextEditingController? addFondosController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    addFondosController = TextEditingController(
+        text: valueOrDefault<String>(
+      '',
+      '0',
+    ));
+  }
+
+  @override
   void dispose() {
+    addFondosController?.dispose();
     yourAgeController?.dispose();
     yourEmailController?.dispose();
     yourNameController?.dispose();
@@ -396,19 +408,71 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                     ),
                   ),
                   Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                    child: TextFormField(
+                      controller: addFondosController,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        labelText: FFLocalizations.of(context).getText(
+                          'jxnc7qm5' /* Your Funds */,
+                        ),
+                        labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                        hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).alternate,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).alternate,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        filled: true,
+                        fillColor:
+                            FlutterFlowTheme.of(context).secondaryBackground,
+                        contentPadding:
+                            EdgeInsetsDirectional.fromSTEB(20, 24, 20, 24),
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1,
+                    ),
+                  ),
+                  Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        final usersUpdateData = createUsersRecordData(
-                          displayName: yourNameController?.text ?? '',
-                          email: yourEmailController?.text ?? '',
-                          age: int.parse(yourAgeController?.text ?? ''),
-                          userTitle: valueOrDefault<String>(
-                            yourTitleController?.text ?? '',
-                            'Badass Geek',
+                        final usersUpdateData = {
+                          ...createUsersRecordData(
+                            displayName: yourNameController?.text ?? '',
+                            email: yourEmailController?.text ?? '',
+                            age: int.tryParse(yourAgeController?.text ?? ''),
+                            userTitle: valueOrDefault<String>(
+                              yourTitleController?.text ?? '',
+                              'Badass Geek',
+                            ),
+                            photoUrl: uploadedFileUrl,
                           ),
-                          photoUrl: uploadedFileUrl,
-                        );
+                          'userMoney': FieldValue.increment(
+                              double.parse(addFondosController!.text)),
+                        };
                         await editProfileUsersRecord.reference
                             .update(usersUpdateData);
                         Navigator.pop(context);
